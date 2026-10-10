@@ -1,6 +1,8 @@
 create table public.listings (
  id uuid primary key default gen_random_uuid(),
  seller_id uuid not null references auth.users(id) on delete cascade,
+ listing_type text not null default 'direct_sell' check (listing_type in ('direct_sell','rent')),
+ rental_period text not null default 'day' check (rental_period in ('day','week','month')),
  title text not null check (char_length(title) between 3 and 120),
  description text not null default 'No description provided.' check (char_length(description) between 10 and 3000),
  price numeric(10,2) not null check (price >= 0 and price <= 99999999),

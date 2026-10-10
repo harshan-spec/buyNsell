@@ -1,4 +1,5 @@
 /* Match the Attendly palette, compact header and rounded white panels. */
+.listing-type{border:1px solid var(--line);border-radius:10px;padding:16px;display:flex;gap:25px;margin:20px 0}.listing-type legend{font-size:12px;font-weight:600;padding:0 6px}.dialog .listing-type label{display:flex;flex-direction:row;align-items:center;gap:8px;margin:0;font-size:13px}.dialog .listing-type input{width:16px;height:16px;padding:0;accent-color:#347e65}.offer-badge{color:#347e65;font-weight:700}.rental-info{font-size:12px;line-height:1.7;background:#eaf3ed;padding:13px;border-radius:8px;color:#526e60}[data-theme="dark"] .offer-badge{color:#89d4b4}[data-theme="dark"] .rental-info{background:#293d33;color:#b6cec1}
 .theme-toggle{display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--line);border-radius:10px;background:transparent;color:inherit;flex-shrink:0}.theme-toggle:hover{background:#e4efe8}
 [data-theme="dark"]{color-scheme:dark;background:#111b19;color:#e5eeea;--green:#79c9aa;--line:#34443d;--muted:#9aafa4}
 [data-theme="dark"] body{background:#111b19;color:#e5eeea}
