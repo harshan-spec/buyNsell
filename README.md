@@ -21,3 +21,5 @@ Feedback stores name, optional email, rating and message in public.feedback. Vis
 ## Deployment
 
 https://buynsell-six.vercel.app — Vite deployed through Vercel from harshan-spec/buyNsell. Theme and listing management keys are saved in the browser.
+
+Lost & found: use the button beside Sell an item to post a lost or found item. A photo and student contact details are required. Posts are browsed in the Lost & found tab and managed through My listings with Mark resolved. Database constraints require a photo path and zero price for these posts.
