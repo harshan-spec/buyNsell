@@ -1,4 +1,24 @@
 /* Match the Attendly palette, compact header and rounded white panels. */
+.theme-toggle{display:grid;place-items:center;width:36px;height:36px;border:1px solid var(--line);border-radius:10px;background:transparent;color:inherit;flex-shrink:0}.theme-toggle:hover{background:#e4efe8}
+[data-theme="dark"]{color-scheme:dark;background:#111b19;color:#e5eeea;--green:#79c9aa;--line:#34443d;--muted:#9aafa4}
+[data-theme="dark"] body{background:#111b19;color:#e5eeea}
+[data-theme="dark"] header,[data-theme="dark"] nav,[data-theme="dark"] .dialog,[data-theme="dark"] .product,[data-theme="dark"] .empty,[data-theme="dark"] .search-row,[data-theme="dark"] .filter-row{background:#1c2925;border-color:#34443d}
+[data-theme="dark"] .brand,[data-theme="dark"] .brand>span:not(.brand-icon):not(.brand-dot),[data-theme="dark"] h2,[data-theme="dark"] h3,[data-theme="dark"] .product-title,[data-theme="dark"] .dialog h2,[data-theme="dark"] .dialog h3,[data-theme="dark"] .empty h3{color:#e5eeea}
+[data-theme="dark"] nav button,[data-theme="dark"] .count,[data-theme="dark"] .free-filter,[data-theme="dark"] .results-heading,[data-theme="dark"] .dialog label{color:#b6cec1}
+[data-theme="dark"] nav button.active,[data-theme="dark"] .eyebrow,[data-theme="dark"] .product-bottom strong,[data-theme="dark"] .detail-price,[data-theme="dark"] .free-price{color:#89d4b4!important}
+[data-theme="dark"] .search,[data-theme="dark"] select,[data-theme="dark"] .dialog input,[data-theme="dark"] .dialog textarea,[data-theme="dark"] .dialog select{background:#15211d;border-color:#3b5045;color:#e5eeea}
+[data-theme="dark"] .search input{color:#e5eeea}
+[data-theme="dark"] .primary,[data-theme="dark"] .toast{background:#347e65;border-color:#438d74;color:#fff}
+[data-theme="dark"] .primary:hover{background:#419879}
+[data-theme="dark"] .theme-toggle:hover,[data-theme="dark"] .count,[data-theme="dark"] .seller-box,[data-theme="dark"] .manage button,[data-theme="dark"] .empty-icon{background:#293d33}
+[data-theme="dark"] .product-image,[data-theme="dark"] .detail-image{background:#293b33;color:#9ebaaa}
+[data-theme="dark"] .tone-Electronics{background:#29363d}[data-theme="dark"] .tone-Furniture{background:#39372f}[data-theme="dark"] .tone-Fashion{background:#3a2f37}
+[data-theme="dark"] .badge{background:#203d2f;color:#c2dfd1}[data-theme="dark"] .free-badge{background:#347a5c;color:white}
+[data-theme="dark"] .product-meta,[data-theme="dark"] .location,[data-theme="dark"] .hint,[data-theme="dark"] .dialog>p,[data-theme="dark"] .empty p,[data-theme="dark"] footer>span,[data-theme="dark"] footer small,[data-theme="dark"] .seller-box p,[data-theme="dark"] .product-bottom>span{color:#9bafa2}
+[data-theme="dark"] .results-heading select{background:transparent;color:#b6cec1}
+[data-theme="dark"] footer,[data-theme="dark"] .manage{border-color:#34443d}
+[data-theme="dark"] .skeleton{background:linear-gradient(100deg,#23352c 20%,#2d4136 45%,#23352c 70%);background-size:200% 100%}
+[data-theme="dark"] .danger{background:#93483f;border-color:#93483f}
 :root{background:#f1f7f3;color:#20363b;--green:#24564b;--lime:#cce9dc;--line:#dce5df;--muted:#7b8985}
 body{background:#f1f7f3}
 header{height:72px;background:white;max-width:none;padding:0 max(5%,calc((100% - 1160px)/2));border-bottom:1px solid #e4ebe6}
