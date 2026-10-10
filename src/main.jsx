@@ -42,3 +42,5 @@ function App(){
  </>
 }
 createRoot(document.getElementById('root')).render(<App/>);
+
+import './attendance-theme.css';
