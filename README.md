@@ -1,19 +1,23 @@
 # buyNsell
 
-A marketplace within the college for selling or giving away used products. Buyers browse and contact sellers without an account. Sellers use Supabase email authentication to publish, edit, mark sold, relist and delete their products. No payment integration.
+A campus marketplace for selling, renting or giving away products. Visitors publish directly with product and contact details. No accounts, passwords, verification or payments.
 
 ## Development
 
-Node.js 22 or newer. Run `npm install`, then `npm run dev`. Run `npm run build` for production.
+Run npm install, npm run dev, or npm run build with Node.js 22 or newer.
 
-## Backend
+## Backend and listing management
 
-Supabase project: `pentvxbgrqithicezozf` (buyNsell, Mumbai). Schema and row ownership policies are documented in `supabase/schema.sql`, which has already been applied to the new project. The client uses a public publishable key; all mutations are protected by RLS and require the seller's authenticated user ID. Product photos are stored in the `products` bucket with a 5 MB limit and JPEG/PNG/WebP validation.
+Supabase project pentvxbgrqithicezozf, Mumbai. Apply supabase/schema.sql then supabase/account-free.sql for the current structure. Listings have no user-account relationship. Previous Auth records are retained; the app does not use them or create new accounts. SMTP is unused.
 
-Product contact fields are public so guest buyers can contact sellers. Seller name, year and department are self-declared, not independently verified. Email confirmation verifies mailbox ownership. Account details are stored by Supabase Auth. Listing details and seller contact information are in Postgres.
+The manage_listing RPC checks a random management key for edits, status changes and deletion. The hashed key is stored in private.listing_management, inaccessible to visitors. The original key stays in the seller browser under buynsell-listing-keys. Clearing browser data loses management access. Older listings without browser keys can be managed by the owner in Supabase.
 
-Production: https://buynsell-six.vercel.app . Supabase Authentication URL Configuration uses this as the Site URL and allowed redirect for confirmation and password recovery. Email confirmation remains enabled. A custom SMTP provider is required for student signup: Supabase's built-in email sender only delivers to organization team members, with a 2 emails/hour limit. Configure SMTP in Authentication > Emails > SMTP Settings before inviting students.
+JPEG, PNG and WebP photos up to 5 MB can be uploaded. Public photos are immutable to visitors; obsolete photos require owner cleanup in Storage.
+
+## Feedback inbox
+
+Feedback stores name, optional email, rating and message in public.feedback. Visitors can submit but cannot read feedback. Read submissions in Supabase Table Editor > feedback. Email notifications are not configured.
 
 ## Deployment
 
-Vite frontend deployed to Vercel with the GitHub `harshan-spec/buyNsell` repository. `vercel.json` configures fallback routing for authentication links.
+https://buynsell-six.vercel.app — Vite deployed through Vercel from harshan-spec/buyNsell. Theme and listing management keys are saved in the browser.
