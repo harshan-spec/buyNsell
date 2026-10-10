@@ -12,7 +12,7 @@ Supabase project: `pentvxbgrqithicezozf` (buyNsell, Mumbai). Schema and row owne
 
 Product contact fields are public so guest buyers can contact sellers. Seller name, college, year and department are self-declared, not independently verified. Email confirmation verifies mailbox ownership. Account details are stored by Supabase Auth. Listing details and seller contact information are in Postgres.
 
-Set Supabase Authentication URL Configuration's Site URL to the production Vercel URL and add it to the redirect allowlist for confirmation and password recovery. Email confirmation remains enabled. Supabase's default email delivery has rate limits; configure a custom SMTP provider before broad public rollout.
+Production: https://buynsell-six.vercel.app . Supabase Authentication URL Configuration uses this as the Site URL and allowed redirect for confirmation and password recovery. Email confirmation remains enabled. A custom SMTP provider is required for student signup: Supabase's built-in email sender only delivers to organization team members, with a 2 emails/hour limit. Configure SMTP in Authentication > Emails > SMTP Settings before inviting students.
 
 ## Deployment
 
